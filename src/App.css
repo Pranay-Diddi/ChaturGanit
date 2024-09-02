@@ -1,40 +1,105 @@
-/* App.css or a separate CSS file */
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6; /* Light background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* General container for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.outerBox {
+  border: none; /* Remove default border */
+  border-radius: 16px; /* More rounded corners */
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for a card effect */
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
 
 .nav-container {
-    max-width: 800px; /* Adjust container width */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  .nav-box {
-    height: 150px; /* Fixed height for boxes */
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 20px; /* Increase padding for better spacing */
-    text-align: center;
-    font-size: 1rem; /* Adjust font size */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow */
-    display: flex; /* Flexbox to center content */
-    flex-direction: column; /* Column layout */
-    justify-content: center; /* Center content vertically */
-    overflow: hidden; /* Ensure content fits within the box */
-  }
-  
-  .info-box {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f8f9fa;
-    text-align: center; /* Center text */
-    margin: 20px;
-  }
-  
-  
-  .outerBox {
-    border: 2px solid black;
-    border-radius: 8px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add space between elements */
+  justify-content: center; /* Center the navigation items */
+}
 
-  .navBox:hover {
-    transform: translateY(-15px);
-  }
+.nav-box {
+  background-color: #fff; /* White background for clarity */
+  border-radius: 16px; /* Rounded corners */
+  padding: 30px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover */
+  cursor: pointer; /* Hand cursor on hover */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.nav-box h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2b2d42; /* Darker color for text */
+}
+
+.nav-box p {
+  font-size: 1rem;
+  color: #4a4e69; /* Medium grey for description text */
+}
+
+.info-box {
+  border: none;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.info-box:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-success {
+  background-color: #5cb85c;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #4cae4c;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  color: #ffffff;
+}
